@@ -9,13 +9,14 @@ const Search = ({ city, setCity, getWeather, setGetWeather }) => {
       .then((res) => res.json())
       .then((result) => {
         setGetWeather(result);
-      });
+      })
+      .catch((err) => console.log(err));
   }
 
   return (
     <form className="search">
       <input
-        type="value"
+        type="text"
         placeholder="Type a city here"
         value={city}
         onChange={(e) => {
