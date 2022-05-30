@@ -1,0 +1,10 @@
+# this is a weather App
+
+built with the JavaScript library react.js
+
+it incorporates react hooks,API calls,error boundary
+conditional rendering and functional components
+
+it accepts a city as an input and displays the
+weather situation of the input
+
