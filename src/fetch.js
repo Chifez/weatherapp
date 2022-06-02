@@ -13,7 +13,7 @@ export const getCity =(city,setGetWeather,getWeather,setError)=>{
           return res.json();
         } else {
           if (res.status === 404) {
-            alert("Oops, there seems to be an error!");
+            // alert("Oops, there seems to be an error!");
             setError(("Oops, there seems to be an error!(wrong location)"));
     
         }
@@ -25,6 +25,7 @@ export const getCity =(city,setGetWeather,getWeather,setError)=>{
         console.log(getWeather);
       })
       .catch((error) => console.log(error));
+      setError('')
 }
 
 
@@ -38,10 +39,10 @@ export const getLoc =(loc,setGetWeather,getWeather,setError)=>{
      return res.json();
    } else {
      if (res.status === 404) {
-       return setError(("Oops, there seems to be an error!(wrong location)"));
+       setError(("Oops, there seems to be an error!(wrong location)"));
+      //  alert("Oops, there seems to be an error!");
      }
-     alert("Oops, there seems to be an error!");
-    //  throw new Error("You have an error");
+     throw new Error("You have an error");
    }
  })
  .then((object) => {

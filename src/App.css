@@ -3,3 +3,63 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* body{
+} */
+
+.App{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  height: 100vh;
+  background-color: #267b818e;
+}
+.weather{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  position: relative;
+  border-radius: 20px;
+  width:70vw;
+  height: 80vh;
+  padding:20px
+}
+
+.search{
+  position: absolute;
+  top:10px;
+}
+.search input{
+  padding:10px 15px;
+  border: 1px solid transparent;
+  /* background:none; */
+  outline: none;
+}
+
+.search button{
+  padding:10px 10px;
+  border: 1px solid transparent;
+  background-color: crimson;
+}
+
+.WeatherData{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+  /* position:absolute; */
+  height:100%;
+  width:100%;
+}
+.WeatherData .icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:10px;
+  background-color: aqua;
+  border-radius: 100%;
+}
+

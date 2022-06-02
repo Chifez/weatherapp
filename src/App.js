@@ -11,15 +11,21 @@ function App() {
  
 
   const getLocation = async() =>{
-    await navigator.geolocation.getCurrentPosition((position) => {
-     const loc = `lat=${position.coords.latitude}&lon=${position.coords.longitude}`;
+    if(navigator.geolocation){
       if (city){
         getCity(city,setGetWeather,getWeather,setError)
       }else{
-        getLoc(loc,setGetWeather,getWeather,setError)
-      };
-  })
+          await navigator.geolocation.getCurrentPosition((position) => {
+           const loc = `lat=${position.coords.latitude}&lon=${position.coords.longitude}`;
+          getLoc(loc,setGetWeather,getWeather,setError)
+          });
+    }
   }
+  else{
+    alert('your location isnt turned on')
+  }
+
+}
 
 
   
@@ -29,6 +35,7 @@ function App() {
   
   return (
     <div className="App">
+      <div className="weather">
       <Search
       setCity={setCity}
       getLocation={getLocation}
@@ -39,6 +46,7 @@ function App() {
        error={error}
        getWeather ={getWeather}
        />
+      </div>
     </div>
   );
 }

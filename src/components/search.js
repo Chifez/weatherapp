@@ -19,7 +19,7 @@ useEffect(() => {
        onChange={(e) => setCity(e.target.value)}
      />
 
-     <button onClick={(e)=>getLocation(e)}>search</button>
+     <button onClick={getLocation}>search</button>
    </div>
   );
 };
