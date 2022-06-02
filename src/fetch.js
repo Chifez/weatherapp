@@ -14,7 +14,7 @@ export const getCity =(city,setGetWeather,getWeather,setError)=>{
         } else {
           if (res.status === 404) {
             // alert("Oops, there seems to be an error!");
-            setError(("Oops, there seems to be an error!(wrong location)"));
+            setError(("Oops, there seems to be an error!(incorrect location)"));
     
         }
           throw new Error("You have an error");

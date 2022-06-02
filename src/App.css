@@ -13,19 +13,21 @@
   align-items: center;
   width:100vw;
   height: 100vh;
-  background-color: #267b818e;
+  /* background-color: #267b818e; */
+  background-image: url('../public/nathan-dumlao-OHzkfrv9Ycw-unsplash.jpg');
 }
+
 .weather{
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: blue;
+  /* background-color: blue; */
   position: relative;
   border-radius: 20px;
   width:70vw;
   height: 80vh;
-  padding:20px
+  /* padding:50px */
 }
 
 .search{
@@ -33,7 +35,9 @@
   top:10px;
 }
 .search input{
+ font-weight: 600;
   padding:10px 15px;
+  text-transform: capitalize;
   border: 1px solid transparent;
   /* background:none; */
   outline: none;
@@ -55,6 +59,13 @@ align-items: center;
   width:100%;
   color:white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.App .error{
+  font-size:1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:white;
+  text-transform: capitalize;
 }
 
 .WeatherData h4{
@@ -79,20 +90,31 @@ align-items: center;
   background-color: aqua;
   border-radius: 100%;
 }
+
 .WeatherData .type{
   font-size: 1.5rem;
   text-transform: capitalize;
 }
+
 .weather-datas{
   display: flex;
   justify-content: space-around;
   align-content: center;
   width:90%;
-  height:10%;
+  padding:20px 0;
   background-color: grey;
   position: absolute;
+  border-radius: 10px;
   bottom: 20px;
   margin: 5px;
+}
+
+.hum-data, .wind-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
 }
 
 
