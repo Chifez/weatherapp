@@ -4,19 +4,20 @@ const WeatherData = ({ error,getWeather}) => {
       <>
       {(error ? <div>{error}</div> : (getWeather.cod === 200 && <div>
          <div className="WeatherData">
+              <h4>{getWeather?.name}</h4>
+                  <h2>{getWeather?.main?.temp}°C</h2>
            <div className="icon">
-             <img src={`http://openweathermap.org/img/wn/${getWeather?.weather[0]?.icon}@2x.png`} alt="logo" />
+             <img src={`http://openweathermap.org/img/wn/${getWeather?.weather[0]?.icon}@4x.png`} alt="logo" />
            </div>
-            <p>{getWeather?.weather[0]?.description}</p>
-              <h2>{getWeather?.name}</h2>
+            <p className="type">{getWeather?.weather[0]?.description}</p>
               <div className="weather-datas"> 
-                <div className="temp-data">
-                  <p>temp</p>
-                  <p>{getWeather?.main?.temp}°C</p>
-                </div>
                 <div className="hum-data">
                   <p>humidity</p>
                   <p>{getWeather?.main?.humidity}</p>
+                </div>
+                <div className="wind-data">
+                  <p>wind</p>
+                  <p>{getWeather?.main?.wind}</p>
                 </div>
               </div>
           </div>
