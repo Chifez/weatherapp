@@ -32,21 +32,26 @@
 
 .search{
   position: absolute;
+  /* width:80%; */
   top:10px;
 }
 .search input{
  font-weight: 600;
-  padding:10px 12px;
+  padding:10px 8px;
   text-transform: capitalize;
   border: 1px solid transparent;
   /* background:none; */
   outline: none;
+  
+  width:30vw;
+
 }
 
 .search button{
-  padding:10px 8px;
+  padding:10px 6px;
   border: 1px solid transparent;
   background-color: crimson;
+  width:10vw;
 }
 
 .WeatherData{
@@ -115,6 +120,15 @@ align-items: center;
   justify-content: center;
   align-items: center;
   text-transform: capitalize;
+}
+@media screen and (max-width:750px) and (min-width:250px) {
+  .search input{
+     width:50vw;
+   }
+   
+   .search button{
+     width:20vw;
+   }
 }
 
 
