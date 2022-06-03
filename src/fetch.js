@@ -5,7 +5,7 @@
 
 export const getCity =(city,setGetWeather,getWeather,setError)=>{
     fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api.key}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api.key}&units=metric`
       )
       .then((res) => {  //how to make this part work
         if (res.ok) {
@@ -31,7 +31,7 @@ export const getCity =(city,setGetWeather,getWeather,setError)=>{
 
 export const getLoc =(loc,setGetWeather,getWeather,setError)=>{
     fetch(
-        `http://api.openweathermap.org/data/2.5/weather?${loc}&appid=${api.key}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?${loc}&appid=${api.key}&units=metric`
       )
       .then((res) => { 
    if (res.ok) {
