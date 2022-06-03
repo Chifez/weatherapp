@@ -36,7 +36,7 @@
 }
 .search input{
  font-weight: 600;
-  padding:10px 15px;
+  padding:10px 12px;
   text-transform: capitalize;
   border: 1px solid transparent;
   /* background:none; */
@@ -44,7 +44,7 @@
 }
 
 .search button{
-  padding:10px 10px;
+  padding:10px 8px;
   border: 1px solid transparent;
   background-color: crimson;
 }
