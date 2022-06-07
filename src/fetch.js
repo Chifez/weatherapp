@@ -1,11 +1,12 @@
+// import REACT_APP_API_KEY from "../.env";
+//  const api = {
+//     key: "7f485cf569940e6335eaccba70c7fafa",
+//   };
 
- const api = {
-    key: "7f485cf569940e6335eaccba70c7fafa",
-  };
-
+const API_KEY = process.env.REACT_APP_API_KEY;
 export const getCity =(city,setGetWeather,getWeather,setError)=>{
     fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api.key}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
       )
       .then((res) => {  //how to make this part work
         if (res.ok) {
@@ -31,7 +32,7 @@ export const getCity =(city,setGetWeather,getWeather,setError)=>{
 
 export const getLoc =(loc,setGetWeather,getWeather,setError)=>{
     fetch(
-        `https://api.openweathermap.org/data/2.5/weather?${loc}&appid=${api.key}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?${loc}&appid=${API_KEY}&units=metric`
       )
       .then((res) => { 
    if (res.ok) {
