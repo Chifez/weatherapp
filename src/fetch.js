@@ -1,7 +1,4 @@
-// import REACT_APP_API_KEY from "../.env";
-//  const api = {
-//     key: "7f485cf569940e6335eaccba70c7fafa",
-//   };
+
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 export const getCity =(city,setGetWeather,getWeather,setError)=>{
