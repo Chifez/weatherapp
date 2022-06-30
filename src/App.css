@@ -15,19 +15,44 @@
   height: 100vh;
   /* background-color: #267b818e; */
   background-image: url('../public/nathan-dumlao-OHzkfrv9Ycw-unsplash.jpg');
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height:100vh;
+}
+
+.main h2 {
+font-size: 2.5rem;
+}
+
+.main h5{
+  font-size: 1rem;
+  line-height: 5rem;
+}
+
+.main button{
+  border: 1px solid transparent;
+  background-color: crimson;
+  padding: 1rem 2rem;
+  font-size:1rem;
+  font-weight: 700;
+text-transform: capitalize;
+}
 .weather{
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: blue; */
   position: relative;
   border-radius: 20px;
   width:70vw;
   height: 80vh;
-  /* padding:50px */
 }
 
 .search{
@@ -63,12 +88,12 @@ align-items: center;
   height:100%;
   width:100%;
   color:white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
 
 .App .error{
   font-size:1.5rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
   color:white;
   text-transform: capitalize;
 }
@@ -129,6 +154,25 @@ align-items: center;
    .search button{
      width:20vw;
    }
+
+   .main h2 {
+    font-size: 1rem;
+    text-align: center;
+    }
+    
+    .main h5{
+      font-size: 0.8rem;
+      line-height: 5rem;
+    }
+    
+    .main button{
+      border: 1px solid transparent;
+      background-color: crimson;
+      padding: 0.8rem 1.6rem;
+      font-size:0.8rem;
+      font-weight: 700;
+    text-transform: capitalize;
+    }
 }
 
 

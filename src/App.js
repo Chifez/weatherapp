@@ -3,6 +3,8 @@ import "./App.css";
 import { getCity,getLoc } from "./fetch";
 import Search from "./components/search";
 import WeatherData from "./components/weather-data";
+import {BrowserRouter as Router, Routes ,Route} from 'react-router-dom'
+import Main from "./components";
 
 function App() {  
   const [city, setCity] = useState("");
@@ -34,20 +36,30 @@ function App() {
   },[]);
   
   return (
-    <div className="App">
-      <div className="weather">
-      <Search
-      setCity={setCity}
-      getLocation={getLocation}
-      city={city}
-      />
+    <Router>
+        <div className="App">
+      <Routes>
+        <Route path ='/' element = {<Main/>}/>
+        <Route path = '/data' element ={
+                    <div className="weather">
+                    <Search
+                    setCity={setCity}
+                    getLocation={getLocation}
+                    city={city}
+                    />
 
-      <WeatherData 
-       error={error}
-       getWeather ={getWeather}
-       />
-      </div>
-    </div>
+                    <WeatherData 
+                    error={error}
+                    getWeather ={getWeather}
+                    />
+                    </div>
+        } />
+        
+
+      </Routes>
+        </div>
+
+    </Router>
   );
 }
 
