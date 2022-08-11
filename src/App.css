@@ -56,8 +56,8 @@
 	align-items: center;
 
 	width: 40vw;
-	/* height: auto; */
-	height: 90vh;
+	padding: 8rem;
+	/* height: 90vh; */
 
 	color: #224;
 	border-radius: 20px;
@@ -152,8 +152,8 @@
 @media screen and (max-width: 750px) and (min-width: 250px) {
 	.weather {
 		width: 80vw;
-		height: 80vh;
-		/* padding: 5rem; */
+		/* height: 80vh; */
+		padding: 7rem;
 	}
 
 	.main h2 {
