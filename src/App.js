@@ -45,7 +45,6 @@ function App() {
 									getLocation={getLocation}
 									city={city}
 								/>
-
 								<WeatherData
 									error={error}
 									getWeather={getWeather}
